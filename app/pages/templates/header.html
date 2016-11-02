@@ -1,0 +1,44 @@
+<header id="header">
+  <div class="profile-link"><a href="#" class="cabinet login link">Вход в личный кабинет</a>
+    <div style="display:none">
+      <div id="login-popup" class="box-modal">
+        <div class="box-modal_close arcticmodal-close"></div>
+        <div class="content-popup">
+          <h1>Вход на сайт</h1><span class="hint hint-t">*- Поля, отмеченные звездочкой, обязательны для заполнения.</span>
+          <div style="padding: 0 60px 0 60px" class="inp-b"></div>
+          <form action="news/" method="POST" class="form">
+            <div class="inp-b">
+              <label for="">Логин*:</label>
+              <input type="text" name="username" value="" placeholder=""/>
+            </div>
+            <div class="inp-b">
+              <label for="">Пароль*:</label>
+              <input type="password" name="password" value="" placeholder=""/>
+            </div>
+            <input type="hidden" name="returnUrl" value="" class="returnUrl"/>
+            <input type="hidden" name="service" value="login" class="loginLoginValue"/>
+            <div class="inp-b"><a href="passwordrecovery/" class="forget-pass">Забыли свой пароль?</a>
+              <div class="btn btn-yellow">
+                <input type="submit" name="Login" value="Войти"/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><a href="#" class="reg link">Регистрация</a>
+  </div>
+  <div class="logo"><a href=""><img src="/assets/images/logo.png" alt=""/></a></div>
+  <div class="logotext"><span>Ucompservice</span>
+    <p>Быстрая компьютерная помощь</p>
+  </div>
+  <div class="search">
+    <form action="">
+      <input id="search" type="text" name="search" value="" placeholder="Поиск по сайту"/>
+      <input type="image" src="/assets/images/lupa.png"/>
+      <div id="search-result">
+        <div class="search-inner"></div>
+      </div>
+    </form>
+  </div>
+  <div class="phone"><span>(925) 411-20-08</span><a href="#" class="orderCall link">Заказать обратный звонок</a></div><a href="#" class="btn btn-blue order link">Сделать заказ</a>
+</header>

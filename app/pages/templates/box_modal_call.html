@@ -1,0 +1,43 @@
+<div id="call-popup" class="box-modal">
+  <div class="box-modal_close arcticmodal-close"></div>
+  <div class="content-popup">
+    <h1>Заказать обратный звонок</h1><span class="hint hint-t">Пожалуйста, заполните краткую контактную информацию. Наши сотрудники свяжутся с вами в рабочее время Cлужбы информации.</span>
+    <form action="news/" method="POST" class="form">
+      <div class="inp-b">
+        <label for="name">Ваше имя*:</label>
+        <input type="text" value="" name="name" placeholder=""/>
+      </div>
+      <div class="inp-b">
+        <label for="phone">Мобильный телефон*:</label>
+        <input type="text" value="" name="phone" placeholder=""/>
+      </div>
+      <div class="inp-b">
+        <label for="subject">В чем ваш вопрос?*:</label>
+        <input type="text" value="" name="message" placeholder=""/>
+      </div>
+      <div style="width: 100%;" class="inp-b">
+        <div class="info_error"></div>
+      </div>
+      <div class="inp-b captcha">
+        <label style="width: 156px; float: left;"><img id="realCaptcha" border="1px" style="position: relative; height: 44px; float: left; top: -6px;" src="/assets/components/realcaptcha/kcaptcha/index.php"/>
+          <div onclick="reloadCaptcha()" style="position: relative; float: left; width: 32px; height: 32px; border: 0; cursor: pointer; margin-left: 10px; margin-top: 2px;">
+            <div style="position: relative; width: 22px; height: 26px; margin-left: 5px; margin-top: 2px; background-image: url('/assets/images/reload.png');"></div>
+          </div>
+        </label>
+        <input id="captcha" name="captcha" type="text" value="" maxlength="10" style="position: relative;text-align: center; width: 100px;"/>
+        <script>
+          function reloadCaptcha() {
+          $("img#realCaptcha").attr("src", "/assets/components/realcaptcha/kcaptcha/index.php?" + Math.random());
+          return 0;
+          }
+        </script>
+      </div><span class="hint">*- поля, отмеченные звездочкой, обязательны для заполнения.</span>
+      <div class="inp-b">
+        <div class="btn btn-yellow">
+          <input type="submit" name="orderCall" value="Ждать звонка"/>
+        </div>
+      </div>
+      <input type="hidden" name="callModal" value="true"/>
+    </form>
+  </div>
+</div>

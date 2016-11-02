@@ -1,20 +1,9 @@
 {
-  "name": "csssr-project-template",
-  "version": "0.26.0",
-  "description": "A template for a quick start.",
+  "name": "ucompservice",
+  "version": "0.1.0",
+  "description": "",
   "keywords": [
-    "csssr-project-template",
-    "cpt",
-    "csssr",
-    "project",
-    "template",
-    "frontend",
-    "boilerplate",
-    "gulp",
-    "webpack",
-    "babel",
-    "jade",
-    "stylus"
+    "ucompservice"
   ],
   "scripts": {
     "start": "gulp --debug",
@@ -36,18 +25,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh@github.com:CSSSR/csssr-project-template.git"
+    "url": "git+ssh@github.com:aversan/ucompservice.git"
   },
-  "author": "Felix Exter <felixexter@ya.ru> (https://github.com/felixexter)",
-  "contributors": [
-    "Aleksandr Petrov <dzhiriki@gmail.com> (https://github.com/dzhiriki)",
-    "Maxim Samoilov <nitive@icloud.com> (https://github.com/nitive)"
-  ],
-  "bugs": {
-    "url": "https://github.com/CSSSR/csssr-project-template/issues/",
-    "email": "cpt@csssr.com"
-  },
-  "homepage": "https://github.com/CSSSR/csssr-project-template/",
+  "homepage": "https://github.com/aversan/ucompservice/",
   "engines": {
     "node": ">=4.0.0",
     "npm": ">=2.0.0"
@@ -62,7 +42,6 @@
     "babel-plugin-transform-runtime": "^6.9.0",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
-    "bemto.jade": "^1.0.0",
     "browser-sync": "^2.10.0",
     "cross-env": "^1.0.7",
     "debuga": "^1.0.2",
@@ -77,14 +56,13 @@
     "gulp-filter": "^3.0.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-group-css-media-queries": "^1.1.0",
+    "gulp-html-lint": "0.0.1",
     "gulp-if": "^2.0.0",
-    "gulp-jade": "^1.1.0",
-    "gulp-jade-inheritance": "^0.5.3",
     "gulp-jsbeautifier": "^1.0.1",
     "gulp-plumber": "^1.0.1",
     "gulp-plumber-error-handler": "^1.0.0",
-    "gulp-pug-lint": "^0.1.6",
     "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-static-hash": "^0.1.4",
     "gulp-stylint": "^3.0.0",
@@ -94,8 +72,6 @@
     "gulp-zip": "^3.0.0",
     "gulp.spritesmith-multi": "^2.2.0",
     "happypack": "^2.1.1",
-    "jade-get-data": "^1.0.0",
-    "jade-injected": "^1.0.2",
     "jquery": "^2.1.4",
     "merge-stream": "^1.0.0",
     "node-notifier": "^4.3.1",

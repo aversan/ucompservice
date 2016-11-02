@@ -1,29 +1,21 @@
 import gulp from 'gulp';
 import gulpIf from 'gulp-if';
 import plumber from 'gulp-plumber';
-import jade from 'gulp-jade';
-import pugLint from 'gulp-pug-lint';
+import rigger from 'gulp-rigger';
+import htmlLint from 'gulp-html-lint';
 import prettify from 'gulp-jsbeautifier';
-import inheritance from 'gulp-jade-inheritance';
 import cached from 'gulp-cached';
 import filter from 'gulp-filter';
 import rename from 'gulp-rename';
 import errorHandler from 'gulp-plumber-error-handler';
-import getData from 'jade-get-data';
 import staticHash from 'gulp-static-hash';
 
-const data = {
-	getData: getData('app/data'),
-	jv0: 'javascript:void(0);'
-};
-
 gulp.task('templates', () => (
-	gulp.src('app/**/*.jade')
+	gulp.src('app/pages/*.html')
 		.pipe(plumber({errorHandler: errorHandler(`Error in \'templates\' task`)}))
-		.pipe(cached('jade'))
-		.pipe(gulpIf(global.watch, inheritance({basedir: 'app'})))
+		.pipe(cached('html'))
 		.pipe(filter(file => /app[\\\/]pages/.test(file.path)))
-		.pipe(jade({basedir: 'app', data}))
+		.pipe(rigger())
 		.pipe(gulpIf(process.env.PRETTIFY !== false, prettify({
 			braceStyle: 'expand',
 			indentWithTabs: true,
@@ -45,6 +37,6 @@ gulp.task('templates', () => (
 
 gulp.task('templates:lint', () =>
 	gulp
-		.src('app/**/*.jade')
-		.pipe(pugLint())
+		.src('app/pages/*.html')
+		.pipe(htmlLint())
 );

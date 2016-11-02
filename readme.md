@@ -1,12 +1,10 @@
-# CSSSR Project Template
-**Шаблон проекта для быстрого старта**
-
+# ucompservice
 
 ## Старт проекта
 
 ### Склонируй репозиторий и перейди в папку проекта
 ```
-git clone git@github.com:CSSSR/csssr-project-template.git new-project && cd new-project
+git clone git@github.com:aversan/ucompservice.git new-project && cd new-project
 ```
 
 ### Установи модули
@@ -84,24 +82,18 @@ npm run deploy
 ├── app/                       # Исходники
 │   ├── blocks/                # Блоки
 │   │   └── block/             # Блок
-│   │       ├── block.jade     # Разметка блока
+│   │       ├── block.html     # Разметка блока
 │   │       ├── block.js       # Скрипт блока
 │   │       └── block.styl     # Стили блока
 │   ├── data/                  # Данные в формате JSON
 │   ├── pages/                 # Страницы
-│   │   └── index.jade         # Разметка страницы
+│   │   └── index.html         # Разметка страницы
 │   ├── icons/                 # SVG иконки для генерации векторного спрайта
 │   ├── sprites/               # PNG иконки для генерации растрового спрайта
 │   ├── resources/             # Статические файлы для копирования в dist
 │   ├── scripts/               # Скрипты
 │   │   └── app.js             # Главный скрипт
 │   └── styles/                # Стили
-│       ├── helpers/           # Помощники
-│       │   ├── fonts.styl     # Подключение шрифтов
-│       │   ├── mixins.styl    # Примеси
-│       │   ├── optimize.styl  # Сброс стилей и фиксы
-│       │   ├── svg-size.styl  # Переменные с размерами SVG иконок (автосборка)
-│       │   └── variables.styl # Переменные
 │       ├── sprites/           # Переменные с данными PNG спрайтов (автосборка)
 │       └── app.styl           # Главный стилевой файл
 ├── dist/                      # Сборка (автогенерация)
@@ -122,7 +114,7 @@ npm run deploy
 │   ├── server.js              # Запуск локального сервера
 │   ├── sprite.js              # Сборка спрайтов и CSS переменных
 │   ├── styles.js              # Сборка стилей
-│   ├── templates.js           # Сборка страниц из Jade шаблонов
+│   ├── templates.js           # Сборка страниц из HTML шаблонов
 │   ├── watch.js               # Отслеживание изменений и запуск задач
 │   └── zip.js                 # Архивация папки dist
 ├── .csscomb.json              # Конфигурация форматирования CSS
@@ -220,5 +212,3 @@ npm run deploy
     height: 24px;
 }
 ```
-
-## [Внеси свой вклад в развитие проекта!](https://github.com/CSSSR/csssr-project-template/blob/master/contributing.md)

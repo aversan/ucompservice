@@ -1,0 +1,26 @@
+<div id="order-popup" class="box-modal">
+  <div class="box-modal_close arcticmodal-close"></div>
+  <div class="content-popup">
+    <h1>Заказ Он-Лайн</h1><span class="hint hint-t">Пожалуйста, заполните краткую контактную информацию.<br/>Наши сотрудники свяжутся с вами в ближайшее время.</span>
+    <form action="news/" method="POST" class="form">
+      <div class="inp-b">
+        <label for="name">Представьтесь*:</label>
+        <input type="text" value="" name="name" placeholder=""/>
+      </div>
+      <div class="inp-b">
+        <label for="phone">Телефон для связи*:</label>
+        <input type="text" value="" name="phone" placeholder=""/>
+      </div>
+      <div class="inp-b">
+        <label for="message">Причина обращения*:</label>
+        <textarea id="message" name="message" cols="30" rows="10"></textarea>
+      </div><span class="hint">*- поля, отмеченные звездочкой, обязательны для заполнения.</span>
+      <div class="inp-b">
+        <div class="btn btn-yellow">
+          <input type="submit" name="orderModal" value="Отправить"/>
+        </div>
+      </div>
+      <input type="hidden" name="orderModal" value="true"/>
+    </form>
+  </div>
+</div>

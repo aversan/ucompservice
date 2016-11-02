@@ -1,0 +1,39 @@
+<div id="reg-popup" class="box-modal">
+  <div class="box-modal_close arcticmodal-close"></div>
+  <div class="content-popup">
+    <h1>Регистрация</h1><span class="hint hint-t">*- поля, отмеченные звездочкой, обязательны для заполнения.</span>
+    <div class="registerMessage"></div>
+    <form action="news/" method="POST" class="form">
+      <input type="hidden" name="nospam" value=""/>
+      <div class="inp-b">
+        <label for="">Ваше имя*:</label>
+        <input type="text" name="fullname" value="" placeholder=""/>
+      </div>
+      <div class="inp-b">
+        <label for="">Ник*:</label>
+        <input type="text" name="username" value="" placeholder=""/>
+      </div>
+      <div class="inp-b">
+        <label for="">E-mail*:</label>
+        <input type="email" name="email" value="" placeholder=""/>
+      </div>
+      <div class="inp-b">
+        <label for="">Повторите E-mail*:</label>
+        <input type="email" name="email_confirm" value="" placeholder=""/>
+      </div>
+      <div class="inp-b">
+        <label for="">Пароль*:</label>
+        <input type="password" name="password" value="" placeholder=""/>
+      </div>
+      <div class="inp-b">
+        <label for="">Повторите пароль*:</label>
+        <input type="password" name="password_confirm" value="" placeholder=""/>
+      </div>
+      <div class="inp-b">
+        <div class="btn btn-yellow">
+          <input type="submit" name="register" value="Отправить"/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
